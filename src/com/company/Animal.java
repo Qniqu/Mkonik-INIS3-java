@@ -46,4 +46,8 @@ public class Animal {
 
     }
 
+    public String toString() {
+        return species + " " + weight + " " + name;
+    }
+
 }

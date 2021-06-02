@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.devices.Car;
+
 public class Human {
     String firstName;
     String lastName;
@@ -47,5 +49,9 @@ public class Human {
             System.out.println("You are too poor to afford car");
             this.car = null;
         }
+    }
+
+    public String toString() {
+        return firstName + " " + lastName + " " + phone + " " + salary + " " + pet + " " + car;
     }
 }

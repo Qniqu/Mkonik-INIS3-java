@@ -1,15 +1,19 @@
-package com.company;
+package com.company.devices;
 
 public class Car {
 
     final String model;
     final String producer;
-    Double value;
+    public Double value;
 
     public Car(String model, String producer, Double value) {
         this.model = model;
         this.producer = producer;
         this.value = value;
+    }
+
+    public String toString() {
+        return model + " " + producer + " " + value;
     }
 
 }
