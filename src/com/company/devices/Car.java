@@ -1,19 +1,18 @@
 package com.company.devices;
 
-public class Car {
+public class Car extends Device {
 
-    final String model;
-    final String producer;
     public Double value;
+    boolean on;
 
-    public Car(String model, String producer, Double value) {
-        this.model = model;
-        this.producer = producer;
+    public Car(Double value, String producer, String model, int yearOfProduction) {
+        super(producer, model, yearOfProduction);
         this.value = value;
     }
 
-    public String toString() {
-        return model + " " + producer + " " + value;
+    @Override
+    public void TurnOn() {
+        on = true;
+        System.out.println("Your car is on");
     }
-
 }

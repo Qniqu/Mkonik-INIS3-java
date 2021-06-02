@@ -1,20 +1,20 @@
 package com.company.devices;
 
-public class Phone {
-    String Producer;
-    String Model;
+public class Phone extends Device {
     Double screenSize;
     String OperationSystem;
+    boolean on;
 
-    public Phone(String Model, Double screenSize, String operationSystem) {
-        this.Model = Model;
+    public Phone(Double screenSize, String operationSystem, String producer, String model, int yearOfProduction) {
+        super(producer, model, yearOfProduction);
         this.screenSize = screenSize;
         this.OperationSystem = operationSystem;
 
     }
 
-
-    public String toString() {
-        return Model + " " + Producer + " " + screenSize + " " + OperationSystem;
+    @Override
+    public void TurnOn() {
+        on = true;
+        System.out.println("Welcome user");
     }
 }

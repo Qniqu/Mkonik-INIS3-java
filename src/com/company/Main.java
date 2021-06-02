@@ -9,7 +9,7 @@ public class Main {
 		Animal dog = new Animal("Dog");
 		dog.name = "dog1";
 
-		Phone Iphone = new Phone("65", 4.5, "IOS");
+		Phone Iphone = new Phone(4.5, "IOS", "Apple", "6.3/4", 2015);
 
 
 		Human me = new Human();
@@ -18,8 +18,8 @@ public class Main {
 		me.pet = dog;
 		me.setSalary(1000.0);
 
-		Car car1 = new Car("Ibiza", "Seat", 1000.0);
-		Car car2 = new Car("Ibiza", "Seat", 1000.0);
+		Car car1 = new Car(1000.0, "Seat", "Ibiza", 2020);
+		Car car2 = new Car(1000.0, "Seat", "Ibiza", 2020);
 
 		me.setCar(car1);
 
@@ -30,5 +30,7 @@ public class Main {
 		System.out.println(dog);
 		System.out.println(me);
 
+		Iphone.TurnOn();
+		car1.TurnOn();
 	}
 }
