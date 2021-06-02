@@ -18,8 +18,11 @@ public class Main {
 
 		Car car1 = new Car("Ibiza", "Seat");
 
-
 		me.car = car1;
 
+		me.setSalary(-10.00);
+		me.getSalary();
+		me.setSalary(1000.00);
+		me.getSalary();
 	}
 }
