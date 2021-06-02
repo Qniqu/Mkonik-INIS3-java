@@ -6,7 +6,7 @@ public class Human {
     String phone;
     private Double salary;
     Animal pet;
-    Car car;
+    private Car car;
 
     public Double getSalary() {
         if (salary != null) {
@@ -30,5 +30,22 @@ public class Human {
         }
     }
 
+    public Car getCar() {
+        return car;
+    }
 
+    public void setCar(Car car) {
+        if (car.value <= salary) {
+            this.car = car;
+            System.out.println("You bought car");
+        }
+        if (car.value / 12 <= salary && car.value > salary) {
+            this.car = car;
+            System.out.println("You took credit and bought car");
+        }
+        if (car.value / 12 > salary) {
+            System.out.println("You are too poor to afford car");
+            this.car = null;
+        }
+    }
 }

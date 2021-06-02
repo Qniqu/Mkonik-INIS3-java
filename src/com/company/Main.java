@@ -16,13 +16,14 @@ public class Main {
 		me.lastName = "Konik";
 		me.pet = dog;
 
-		Car car1 = new Car("Ibiza", "Seat");
+		Car car1 = new Car("Ibiza", "Seat", 1000.0);
 
-		me.car = car1;
 
 		me.setSalary(-10.00);
 		me.getSalary();
 		me.setSalary(1000.00);
 		me.getSalary();
+
+		me.setCar(car1);
 	}
 }
