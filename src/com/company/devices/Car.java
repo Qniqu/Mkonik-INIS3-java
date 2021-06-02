@@ -4,12 +4,10 @@ import com.company.Human;
 
 public abstract class Car extends Device {
 
-    public Double value;
     boolean on;
 
     public Car(Double value, String producer, String model, int yearOfProduction) {
-        super(producer, model, yearOfProduction);
-        this.value = value;
+        super(producer, model, yearOfProduction, value);
     }
 
     @Override
