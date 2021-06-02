@@ -22,6 +22,18 @@ public class Main {
 		Car car2 = new Car(1000.0, "Seat", "Ibiza", 2020);
 
 		me.setCar(car1);
+		me.cash = 100.0;
+
+		Human jkm = new Human();
+		jkm.firstName = "Janusz";
+		jkm.lastName = "Korwin-Mikke";
+		jkm.cash = 200.0;
+
+		car1.sell(me, jkm, 2000.0);
+
+		jkm.cash = 200000.0;
+
+		car1.sell(me, jkm, 2000.0);
 
 		System.out.println(car2.equals(car1));
 		System.out.println(car2);
@@ -29,8 +41,7 @@ public class Main {
 		System.out.println(Iphone);
 		System.out.println(dog);
 		System.out.println(me);
+		System.out.println(jkm);
 
-		Iphone.TurnOn();
-		car1.TurnOn();
 	}
 }

@@ -1,14 +1,17 @@
 package com.company;
 
 import com.company.devices.Car;
+import com.company.devices.Phone;
 
 public class Human {
     String firstName;
     String lastName;
-    String phone;
+    public Double cash;
     private Double salary;
     Animal pet;
     private Car car;
+    public Phone phone;
+    String phoneNumber;
 
     public Double getSalary() {
         if (salary != null) {
@@ -35,6 +38,11 @@ public class Human {
     public Car getCar() {
         return car;
     }
+
+    public void buyCar(Car car) {
+        this.car = car;
+    }
+
 
     public void setCar(Car car) {
         if (car.value <= salary) {

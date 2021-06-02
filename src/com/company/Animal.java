@@ -2,7 +2,7 @@ package com.company;
 
 import java.io.File;
 
-public class Animal {
+public class Animal implements sellable {
     public final String species;
     private Double weight;
     String name;
@@ -50,4 +50,20 @@ public class Animal {
         return species + " " + weight + " " + name;
     }
 
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if (seller.pet != this) {
+            System.out.println("You can't sell pet that don't belong to you");
+        }
+        if (buyer.cash < price) {
+            System.out.println("This pet is too expensive for buyer");
+        }
+        if (seller.pet == this && buyer.cash >= price) {
+            buyer.cash -= price;
+            seller.cash += price;
+            buyer.pet = seller.pet;
+            seller.pet = null;
+            System.out.println("Pet sold succesfully");
+        }
+    }
 }
