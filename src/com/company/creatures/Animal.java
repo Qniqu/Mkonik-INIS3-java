@@ -1,35 +1,24 @@
-package com.company;
+package com.company.creatures;
+
+import com.company.Human;
+import com.company.sellable;
 
 import java.io.File;
 
-public class Animal implements sellable {
+public abstract class Animal implements sellable, Feedable {
     public final String species;
     private Double weight;
     String name;
     File pic;
 
-    public Animal(String species) {
+    public Animal(String species, Double weight, String name) {
         this.species = species;
+        this.name = name;
         this.weight = weight;
-        if (this.species == "Dog") {
-            this.weight = 3.0;
-        } else if (this.species == "Cat") {
-            this.weight = 2.0;
-        }
-        ;
     }
 
 
-    void feed() {
 
-        if (this.weight > 0) {
-            weight += 1;
-            System.out.println("thanks my weight is now" + this.weight);
-        } else {
-            System.out.println("You can't feed dead pet");
-
-        }
-    }
 
     void takeForAWalk() {
         if (this.weight > 0) {
@@ -65,5 +54,15 @@ public class Animal implements sellable {
             seller.pet = null;
             System.out.println("Pet sold succesfully");
         }
+    }
+
+    @Override
+    public void feed() {
+        System.out.println("you fed your animal");
+    }
+
+    @Override
+    public void feed(Double foodWeight) {
+        System.out.println("you fed " + foodWeight + " to your animal");
     }
 }

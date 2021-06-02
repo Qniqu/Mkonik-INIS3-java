@@ -21,17 +21,17 @@ public class Car extends Device {
     @Override
     public void sell(Human seller, Human buyer, Double price) {
         if (seller.getCar() != this) {
-            System.out.println("You can't sell phone that don't belong to you");
+            System.out.println("You can't sell Car that don't belong to you");
         }
         if (buyer.cash < price) {
-            System.out.println("This phone is too expensive for buyer");
+            System.out.println("This Car is too expensive for buyer");
         }
         if (seller.getCar() == this && buyer.cash >= price) {
             buyer.cash -= price;
             seller.cash += price;
             buyer.buyCar(seller.getCar());
             seller.buyCar(null);
-            System.out.println("Phone sold succesfully");
+            System.out.println("Car sold succesfully");
         }
     }
 }
