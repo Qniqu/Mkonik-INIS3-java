@@ -2,7 +2,7 @@ package com.company.devices;
 
 import com.company.Human;
 
-public class Car extends Device {
+public abstract class Car extends Device {
 
     public Double value;
     boolean on;
@@ -34,4 +34,7 @@ public class Car extends Device {
             System.out.println("Car sold succesfully");
         }
     }
+
+    public abstract void refuel();
+
 }

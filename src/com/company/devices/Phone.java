@@ -2,10 +2,19 @@ package com.company.devices;
 
 import com.company.Human;
 
+import java.net.URL;
+
 public class Phone extends Device {
     Double screenSize;
     String OperationSystem;
     boolean on;
+    private static final String default_version = "2.13.7";
+    private static final String default_protocol = "2137";
+    private static final String default_URL = "https://www.example.com/";
+    private String[] listOfApps;
+    private String nameOfApp;
+    private Double version;
+    private String adress;
 
     public Phone(Double screenSize, String operationSystem, String producer, String model, int yearOfProduction) {
         super(producer, model, yearOfProduction);
@@ -36,4 +45,30 @@ public class Phone extends Device {
             System.out.println("Phone sold succesfully");
         }
     }
+
+    public void installAnApp(String nameOfApp) {
+        this.nameOfApp = nameOfApp;
+    }
+
+    public void installAnApp(String nameOfApp, Double version) {
+        this.nameOfApp = nameOfApp;
+        this.version = version;
+        System.out.println("Instalation of " + nameOfApp + version + " succesfull");
+    }
+
+    public void installAnApp(String nameOfApp, Double version, String adress) {
+        this.nameOfApp = nameOfApp;
+        this.version = version;
+        this.adress = adress;
+    }
+
+    public void installAnApp(String[] listOfApps) {
+        this.listOfApps = listOfApps;
+    }
+
+    public void installAnApp(URL URLofApp) {
+
+    }
+
+
 }

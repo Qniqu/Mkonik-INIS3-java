@@ -2,6 +2,8 @@ package com.company;
 
 import com.company.creatures.Pet;
 import com.company.devices.Car;
+import com.company.devices.Diesel;
+import com.company.devices.Electric;
 import com.company.devices.Phone;
 
 public class Main {
@@ -18,8 +20,8 @@ public class Main {
 		me.setSalary(1000.0);
 		me.pet = dog1;
 
-		Car car1 = new Car(1000.0, "Seat", "Ibiza", 2020);
-		Car car2 = new Car(1000.0, "Seat", "Ibiza", 2020);
+		Car car1 = new Diesel(1000.0, "Seat", "Ibiza", 2020);
+		Car car2 = new Electric(1000.0, "Seat", "NeoIbiza", 2020);
 
 		me.setCar(car1);
 		me.cash = 100.0;
@@ -48,5 +50,11 @@ public class Main {
 		System.out.println(jkm);
 		dog1.feed();
 		dog1.feed(10.0);
+
+		car1.refuel();
+		car2.refuel();
+
+		Iphone.installAnApp("niceApp", 1.12);
+
 	}
 }
